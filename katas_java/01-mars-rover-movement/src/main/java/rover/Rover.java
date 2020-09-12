@@ -41,22 +41,22 @@ public class Rover {
   
   private void computeMovementBackward(String movimiento) {
   if (orientation == Orientation.NORTH) {
-    this.posY = --this.posY;
+    --this.posY;
     this.orientation = Orientation.SOUTH;
     return;
   }
   if (orientation == Orientation.SOUTH) {
-    this.posY = ++this.posY;
+    ++this.posY;
     this.orientation = Orientation.NORTH;
     return;        
   }
   if (orientation == Orientation.WEST) {
-    this.posX = --this.posX;
+    --this.posX;
     this.orientation = Orientation.EAST;
     return;        
   }
   if (orientation == Orientation.EAST) {
-    this.posX = ++this.posX;
+    ++this.posX;
     this.orientation = Orientation.WEST;
     return;        
   }
@@ -74,19 +74,19 @@ private void computeMovementForward(String movimiento){
 
 private void internalComputeMovementForward(String movimiento) {
   if (orientation == Orientation.NORTH) {
-    this.posY = ++this.posY;
+    ++this.posY;
     return;
   }
   if (orientation == Orientation.SOUTH) {
-    this.posY = --this.posY;
+    --this.posY;
     return;        
   }
   if (orientation == Orientation.WEST) {
-    this.posX = ++this.posX;
+    ++this.posX;
     return;        
   }
   if (orientation == Orientation.EAST) {
-    this.posX = --this.posX;
+    --this.posX;
     return;        
   }
 }
